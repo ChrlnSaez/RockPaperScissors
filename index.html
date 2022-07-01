@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>JavaScript Game</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="scoreboard">
+        <h1>Rock Paper Scissor</h1>
+        <div class="scores">
+          <div class="score">
+            <p>YOUR SCORE</p>
+            <h1>0</h1>
+          </div>
+          <div class="ai-score">
+            <p>AI SCORE</p>
+            <h1>0</h1>
+          </div>
+        </div>
+      </div>
+      <div class="hands">
+        <div class="hands-wrapper">
+          <div class="hand paper">
+            <img src="./images/paper.png" onclick="pickUserHand('paper')" />
+          </div>
+          <div class="hand scissors">
+            <img
+              src="./images/scissor.png"
+              onclick="pickUserHand('scissors')"
+            />
+          </div>
+          <div class="hand rock">
+            <img src="./images/rock.png" onclick="pickUserHand('rock')" />
+          </div>
+        </div>
+        <h2 class="help">Please pick your hand</h2>
+        <h4>(The first to get 3 points, wins)</h4>
+      </div>
+      <div class="contest">
+        <div class="userhand">
+          <h1>YOUR PICKED</h1>
+          <div class="handImageContainer">
+            <img id="userPickImage" src="./images/paper.png" />
+          </div>
+        </div>
+        <div class="referee">
+          <div class="decision"><h1>YOU WIN!</h1></div>
+          <div class="newGame" onclick="restartGame()">PLAY AGAIN</div>
+        </div>
+        <div class="computerhand">
+          <h1>AI PICKED</h1>
+          <div class="handImageContainer">
+            <img id="computerPickImage" src="./images/paper.png" />
+          </div>
+        </div>
+      </div>
+      <div class="results">
+        <h1>Congratulations</h1>
+        <p>You Win!</p>
+        <div class="startGame" onclick="startAgain()">Start Game</div>
+        <div class="history" onclick="showMatchHistory()">
+          View Match History
+        </div>
+      </div>
+      <div class="match-history">
+        <h1>Match History</h1>
+        <div class="histories"></div>
+        <div class="startGame" onclick="startAgain()">Start Game</div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
