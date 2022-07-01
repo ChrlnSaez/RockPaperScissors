@@ -1,7 +1,7 @@
 const options = {
-  rock: '/images/rock.png',
-  paper: '/images/paper.png',
-  scissors: '/images/scissor.png',
+  rock: './images/rock.png',
+  paper: './images/paper.png',
+  scissors: './images/scissor.png',
 };
 
 let SCORE = 0;
